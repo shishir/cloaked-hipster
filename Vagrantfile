@@ -20,8 +20,12 @@ cd /home/vagrant/echoprint-codegen/src && make
 EOF
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
   config.vm.box     = "precise64"
   config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
+  end  
   config.vm.provision :shell, inline: $script
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "cookbooks"
