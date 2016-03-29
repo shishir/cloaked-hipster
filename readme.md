@@ -1,4 +1,10 @@
-Setup:
+# cloaked-hipster
+====================
+Music fingerprinting POC similar to shazam.
 
-Please install vagrant plugin by : vagrant plugin install vagrant-omnibus
+
+# Setup:
+=====================
+- Look at the cookbooks directory for frameworks used.
+- Please install vagrant plugin by : vagrant plugin install vagrant-omnibus
 
